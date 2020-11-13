@@ -3,6 +3,10 @@ namespace CryptocurrencyTrader.Models.Enum
     public enum Subunit
     {
         millibitcoin,
-        satoshi
+        satoshi,
+
+        beals,
+
+        ether
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CryptocurrencyTrader.Models;
+using CryptocurrencyTrader.Services;
 
 namespace CryptocurrencyTrader
 {
@@ -23,6 +24,7 @@ namespace CryptocurrencyTrader
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<ICryptoCurrencyService, CryptoCurrencyService>();
             services.AddMvc();
             services.AddEntityFrameworkNpgsql().AddDbContext<PostgresRdsDbContext>
             (opt =>

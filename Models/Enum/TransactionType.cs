@@ -1,20 +1,21 @@
 
-
-public enum TransactionType
+namespace CryptocurrencyTrader.Models.Enum
 {
-    Speculation,
-    Darknet,
+    public enum TransactionType
+    {
+        Speculation,
+        Darknet,
 
-    Laundering,
+        Laundering,
 
-    Ransomware,
+        Ransomware,
 
-    Evasion,
+        Evasion,
 
-    Theft,
+        Theft,
 
-    Hacking,
+        Hacking,
 
-    Legal
-
+        Legal
+    }
 }

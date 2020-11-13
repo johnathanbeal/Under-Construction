@@ -1,18 +1,20 @@
 using System;
-
+using CryptocurrencyTrader.Models.Enum;
 
 public class Transaction
 {
-    public DateTime TransactionDate { get; set; }
+    public int TransactionNumber { get; set; } = 0;
+    
+    public DateTime TransactionDate { get; set; } = DateTime.Now;
 
-    public TransactionType Type { get; set; }
+    public string Type { get; set; } = TransactionType.Legal.ToString();
 
-    public string Symbol { get; set; }
+    public string Symbol { get; set; } = "^";
 
-    public string CryptoCurrency { get; set;}
+    public int CryptoCurrencyId { get; set; } = 3;
 
-    public Decimal TransactionAmount { get; set;}
+    public Decimal TransactionAmount { get; set;} = 100.00m;
 
-    public Decimal CurrencyValue { get; set; }
+    public Decimal CurrencyValue { get; set; } = 100.00m;
 
 }

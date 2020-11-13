@@ -4,48 +4,48 @@ using System;
 
 public class CryptoCurrency
 {
-    public string Plural { get; set; }
+    public int Id {get; set;} = 1;
+    public string Name {get; set; } = "Bitcoin";
+    ///public string Plural { get; set; } = "BealCoinz";
 
-    public string Symbol  { get; set; }
+    public string Symbol  { get; set; } = "₿";
 
-    public string Ticker  { get; set; }
+    public string Ticker  { get; set; } = "BTC";
 
-    public Subunit Subunits  { get; set; }
+    public Subunit Subunits  { get; set; } = Subunit.millibitcoin;
 
-    public string Creator { get; set; }
+    ///public string Creator { get; set; } = "Satoshi Nakamoto";
 
-    public string Implementation { get; set; }
+    ///public string Implementation { get; set; } = "Bitcoin Core";
 
-    public DateTime InitialReleaseDate { get; set; }
+    ///public DateTime InitialReleaseDate { get; set; } = new DateTime(2009, 01, 09);
 
-    public Version InitialReleaseVersion  { get; set; }
+    ///public Version InitialReleaseVersion  { get; set; } = new Version(0,1,0);
 
-    public DateTime LatestReleaseDate  { get; set; }
+    ///public DateTime LatestReleaseDate  { get; set; } = new DateTime(2020, 08, 02);
 
-    public Version LatestReleaseVersion  { get; set; }
+    ///public Version LatestReleaseVersion  { get; set; } = new Version(0,20,1);
 
-    public DevelopmentStatus Status  { get; set; }
+    ///public DevelopmentStatus Status  { get; set; } = DevelopmentStatus.Active;
 
-    public Uri Website  { get; set; }
+    ///public Uri Website  { get; set; } = new Uri("bitcoin.org");
 
-    public DateTime LedgerStart  { get; set; }
+    ///public DateTime LedgerStart  { get; set; } = new DateTime(2009,1,03);
 
-    public string TimestampingScheme { get; set; }
+    public string TimestampingScheme { get; set; } = "PKI";
 
-    public HashAlgorithm HashFunction { get; set; }
+    public String HashFunction { get; set; } = "SHA256";
 
-    private Decimal _blockReward;
+    private Decimal _blockReward {get; set; } = 6.25m;
     public Decimal Block_Reward { get { return Math.Round(_blockReward, 2);} set { _blockReward = Math.Round(value, 2);} }
 
-    public int BlockTimeMinutes { get; set; }
+    public int BlockTimeSeconds { get; set; } = 600;
 
-    public Uri BlockExplorer { get; set; }
-    public long CirculatingSupply { get; set; }
+    ///public Uri BlockExplorer { get; set; } = new Uri("https://www.beal-planet.com/en/history/");
+    ///public long CirculatingSupply { get; set; } = 1;
 
-    public DateTime CirculatingSupplyDate { get; set; }
+    ///public DateTime CirculatingSupplyDate { get; set; } = new DateTime(2020, 02, 29);
 
-    public int SupplyLimit { get; set; }
-
-
+    ///public int SupplyLimit { get; set; } = 21000000;
 
 }
